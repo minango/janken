@@ -1,14 +1,17 @@
-controller.player1.onButtonEvent(ControllerButton.Down, ControllerButtonEvent.Pressed, function () {
-    player1 = 3
+controller.player2.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
+    player2 = 1
 })
 controller.player2.onButtonEvent(ControllerButton.Up, ControllerButtonEvent.Pressed, function () {
     player2 = 2
 })
-controller.player2.onButtonEvent(ControllerButton.Down, ControllerButtonEvent.Pressed, function () {
-    player2 = 3
+controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
+    player1 = 1
 })
 controller.player1.onButtonEvent(ControllerButton.Up, ControllerButtonEvent.Pressed, function () {
     player1 = 2
+})
+controller.player2.onButtonEvent(ControllerButton.Down, ControllerButtonEvent.Pressed, function () {
+    player2 = 3
 })
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (player1 == 1 && player2 == 1) {
@@ -37,11 +40,8 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         game.gameOver(true)
     }
 })
-controller.player1.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
-    player1 = 1
-})
-controller.player2.onButtonEvent(ControllerButton.A, ControllerButtonEvent.Pressed, function () {
-    player2 = 1
+controller.player1.onButtonEvent(ControllerButton.Down, ControllerButtonEvent.Pressed, function () {
+    player1 = 3
 })
 let player2 = 0
 let player1 = 0
